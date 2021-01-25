@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <title>All Agents</title>
+</head>
+
+<body>
+    <center>
+        <h1>Agents near Huston</h1>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ADDRESS</th>
+                <th>CITY</th>
+                <th>ZIPCODE</th>
+                <th>STATE</th>
+            </tr>
+
+            {%for r in res%}
+            <tr>
+                <td>{{r.Id}}</td>
+                <td>{{r.Name}}</td>
+                <td>{{r.Address}}</td>
+                <td>{{r.City}}</td>
+                <td>{{r.Zipcode}}</td>
+                <td>{{r.State}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+
+        <a href="{% url 'Home' %}" >Go To Main Page</a>
+    </center>
+
+</body>
+
+</html>
